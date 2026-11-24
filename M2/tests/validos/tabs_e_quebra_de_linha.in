@@ -1,0 +1,11 @@
+jogada placar_final(casa, fora):
+	var casa > fora:
+		gol "vitoria"
+	gol "nao venceu"
+
+time = ["Bahia",
+        "Vitoria",
+        "Jacuipense"]
+total = 1 + \
+    2 + 3
+narra(placar_final(2, 1))

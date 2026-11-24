@@ -1,0 +1,19 @@
+# fatorial em haxball
+jogada fatorial(n):
+    var n <= 1:
+        gol 1
+    segue:
+        gol n * fatorial(n - 1)
+
+placar = [1, 2,
+          3]
+rodada x em placar:
+    var x % 2 == 0 e nao x > 2: narra("par", x)
+    revisa x em [3]:
+        vantagem
+    segue:
+        cera
+rola legal:
+    apita
+golaco = torcida("nome? ")
+narra(fatorial(5) ** 2, 'oi', WO, impedido)
