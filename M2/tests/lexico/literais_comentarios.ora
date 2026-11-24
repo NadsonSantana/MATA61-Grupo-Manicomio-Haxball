@@ -1,0 +1,16 @@
+<ID, placar>
+<'='>
+<INT, 10>
+<'+'>
+<FLOAT, 2.5>
+<'+'>
+<FLOAT, .5>
+<'+'>
+<FLOAT, 1e3>
+<NEWLINE>
+<ID, nome>
+<'='>
+<STRING, "bola \"rolando\"">
+<'+'>
+<STRING, 'gol'>
+<NEWLINE>
