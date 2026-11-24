@@ -1,0 +1,9 @@
+rodada jogador em time:
+    narra(jogador)
+
+rodada letra em "haxball": narra(letra)
+
+rodada rodada_atual em tabela:
+    rodada jogo em rodada_atual:
+        var jogo: vantagem
+        segue: apita

@@ -1,0 +1,7 @@
+rola legal:
+    narra("a bola ta rolando")
+    var impedido:
+        apita
+    vantagem
+
+rola tempo: cera

@@ -54,7 +54,8 @@ comando_simples
     | GOL
     | GOL expr
     | CERA
-    /* TODO: Membro 2 - comandos apita (break) e vantagem (continue) */
+    | APITA
+    | VANTAGEM
     ;
 
 expr_stmt
@@ -75,7 +76,8 @@ op_atribuicao
 comando_composto
     : condicional
     | definicao_jogada
-    /* TODO: Membro 2 - incluir os lacos rola e rodada aqui */
+    | laco_rola
+    | laco_rodada
     ;
 
 /* var / revisa / segue  (if / elif / else) */
@@ -93,9 +95,15 @@ senao
     | SEGUE ':' bloco
     ;
 
-/* TODO: Membro 2 - regras dos lacos:
-     laco_rola   -> rola (while)
-     laco_rodada -> rodada ... em (for ... in) */
+/* rola (while) */
+laco_rola
+    : ROLA expr ':' bloco
+    ;
+
+/* rodada ... em (for ... in) */
+laco_rodada
+    : RODADA ID EM expr ':' bloco
+    ;
 
 /* jogada (def) */
 definicao_jogada
@@ -104,21 +112,79 @@ definicao_jogada
 
 /* ---------- parametros da jogada ---------- */
 
-/* TODO: Membro 3 - aceitar lista de parametros separados por virgula */
 parametros
     : %empty
+    | lista_parametros
+    ;
+
+lista_parametros
+    : ID
+    | lista_parametros ',' ID
     ;
 
 /* ---------- expressoes ---------- */
 
-/* TODO: Membro 3 - hierarquia completa de expressoes, da menor para a maior
-   precedencia: ou, e, nao, comparacoes (< > == != <= >= em, nao em),
-   + -, * / // %, sinal (+x, -x), ** e primario (chamada f(x), indice a[i],
-   acesso a.b), alem de listas [..], narra(...) e torcida(...) com varios
-   argumentos. O trecho abaixo e so um esqueleto provisorio. */
 expr
-    : expr '+' atomo
-    | atomo
+    : expr OU expr_e
+    | expr_e
+    ;
+
+expr_e
+    : expr_e E expr_nao
+    | expr_nao
+    ;
+
+expr_nao
+    : NAO expr_nao
+    | comparacao
+    ;
+
+comparacao
+    : comparacao op_comparacao soma
+    | soma
+    ;
+
+op_comparacao
+    : '<'
+    | '>'
+    | IGUAL
+    | DIFERENTE
+    | MENOR_IGUAL
+    | MAIOR_IGUAL
+    | EM
+    | NAO EM
+    ;
+
+soma
+    : soma '+' termo
+    | soma '-' termo
+    | termo
+    ;
+
+termo
+    : termo '*' fator
+    | termo '/' fator
+    | termo DIV_INT fator
+    | termo '%' fator
+    | fator
+    ;
+
+fator
+    : '+' fator
+    | '-' fator
+    | potencia
+    ;
+
+potencia
+    : primario
+    | primario POT fator
+    ;
+
+primario
+    : atomo
+    | primario '(' argumentos ')'
+    | primario '[' expr ']'
+    | primario '.' ID
     ;
 
 atomo
@@ -130,7 +196,19 @@ atomo
     | IMPEDIDO
     | WO
     | '(' expr ')'
-    | NARRA '(' expr ')'
+    | '[' argumentos ']'
+    | NARRA '(' argumentos ')'
+    | TORCIDA '(' argumentos ')'
+    ;
+
+argumentos
+    : %empty
+    | lista_expr
+    ;
+
+lista_expr
+    : expr
+    | lista_expr ',' expr
     ;
 
 %%

@@ -165,8 +165,16 @@ EXP     [eE][+-]?{DIGITO}+
 
     /* ---------- operadores e delimitadores ---------- */
 
-    /* TODO: Membro 3 - operadores com mais de um caractere:
-       ** // == != <= >= += -= *= /=  (os tokens ja estao no parser.y) */
+"**"            { TOKEN(POT); }
+"//"            { TOKEN(DIV_INT); }
+"=="            { TOKEN(IGUAL); }
+"!="            { TOKEN(DIFERENTE); }
+"<="            { TOKEN(MENOR_IGUAL); }
+">="            { TOKEN(MAIOR_IGUAL); }
+"+="            { TOKEN(MAIS_IGUAL); }
+"-="            { TOKEN(MENOS_IGUAL); }
+"*="            { TOKEN(VEZES_IGUAL); }
+"/="            { TOKEN(DIV_IGUAL); }
 
 "("|"["         { nivel_parenteses++; TOKEN(yytext[0]); }
 ")"|"]"         { if (nivel_parenteses > 0) nivel_parenteses--; TOKEN(yytext[0]); }
