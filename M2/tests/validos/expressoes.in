@@ -1,0 +1,25 @@
+placar = -2 ** 2 + 3 * (4 - 1) // 2 % 5
+media = gols / jogos
+x = +1 - -2 ** -1
+var placar >= 3 e nao impedido ou WO:
+    narra("goleada", placar)
+var jogador nao em time e jogador em reservas: cera
+vitoria = gols_casa > gols_fora != empate
+iguais = gols_casa == gols_fora
+diferente = a < b <= c
+time = ["Bahia", "Vitoria", 10, 2.5]
+vazio = []
+nome = torcida("quem marcou? ")
+artilheiro = time[0]
+tamanho = time.contar()
+time.adicionar(jogador)
+tabela[i][0] = 3
+placar += 1
+placar -= 1
+placar *= 2
+placar /= 2
+narra()
+narra(
+    "jogo longo",
+    placar
+)

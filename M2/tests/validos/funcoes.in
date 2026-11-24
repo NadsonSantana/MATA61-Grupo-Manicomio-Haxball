@@ -1,0 +1,12 @@
+jogada chute(forca):
+    gol forca * 2
+
+jogada placar(casa, fora, prorrogacao):
+    var prorrogacao: gol casa + fora + 1
+    gol casa + fora
+
+jogada media(gols, jogos): gol gols / jogos
+
+resultado = placar(2, 1, impedido)
+narra(chute(10), media(4, 2))
+gol_de_placa = chute(placar(1, 2, legal) ** 2)
