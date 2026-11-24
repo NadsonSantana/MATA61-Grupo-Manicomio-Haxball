@@ -1,0 +1,6 @@
+a.out
+M*/haxball
+M*/build/
+M*/*.exe
+M*/tests/**/*.out
+.compile.log
