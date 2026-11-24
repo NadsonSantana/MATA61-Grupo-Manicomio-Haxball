@@ -1,0 +1,38 @@
+<ID, a>
+<POT>
+<ID, b>
+<DIV_INT>
+<ID, c>
+<'%'>
+<ID, d>
+<NEWLINE>
+<ID, a>
+<IGUAL>
+<ID, b>
+<DIFERENTE>
+<ID, c>
+<MENOR_IGUAL>
+<ID, d>
+<MAIOR_IGUAL>
+<ID, f>
+<'<'>
+<ID, g>
+<'>'>
+<ID, h>
+<NEWLINE>
+<ID, x>
+<MAIS_IGUAL>
+<INT, 1>
+<NEWLINE>
+<ID, x>
+<MENOS_IGUAL>
+<INT, 2>
+<NEWLINE>
+<ID, x>
+<VEZES_IGUAL>
+<INT, 3>
+<NEWLINE>
+<ID, x>
+<DIV_IGUAL>
+<INT, 4>
+<NEWLINE>
