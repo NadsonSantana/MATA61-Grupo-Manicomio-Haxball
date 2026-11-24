@@ -1,0 +1,10 @@
+# jogada sem parametros
+jogada cobranca_de_falta():
+    chute = "no angulo"
+    narra(chute)
+    gol chute
+
+jogada treino():
+    cera
+
+jogada nada(): gol

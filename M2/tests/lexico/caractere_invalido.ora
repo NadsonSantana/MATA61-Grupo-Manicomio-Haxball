@@ -1,0 +1,10 @@
+<ID, x>
+<'='>
+<INT, 2>
+erro lexico na linha 1: caractere invalido '$'
+<INT, 3>
+<NEWLINE>
+<ID, y>
+<'='>
+erro lexico na linha 2: caractere invalido '@'
+<NEWLINE>

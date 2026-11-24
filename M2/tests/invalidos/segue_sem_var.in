@@ -1,0 +1,3 @@
+x = 1
+segue:
+    narra(x)

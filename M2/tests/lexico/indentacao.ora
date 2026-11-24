@@ -1,0 +1,33 @@
+<VAR>
+<ID, a>
+<':'>
+<NEWLINE>
+<INDENT>
+<VAR>
+<ID, b>
+<':'>
+<NEWLINE>
+<INDENT>
+<ID, x>
+<'='>
+<INT, 1>
+<NEWLINE>
+<ID, y>
+<'='>
+<INT, 2>
+<NEWLINE>
+<DEDENT>
+<DEDENT>
+<SEGUE>
+<':'>
+<NEWLINE>
+<INDENT>
+<ID, z>
+<'='>
+<INT, 3>
+<NEWLINE>
+<DEDENT>
+<ID, w>
+<'='>
+<INT, 4>
+<NEWLINE>

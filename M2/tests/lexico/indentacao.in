@@ -1,0 +1,9 @@
+var a:
+    var b:
+        x = 1
+
+        # comentario no meio do bloco
+        y = 2
+segue:
+	z = 3
+w = 4

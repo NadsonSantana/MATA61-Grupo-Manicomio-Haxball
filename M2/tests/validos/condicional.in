@@ -1,0 +1,8 @@
+var placar:
+    narra("ganhando")
+revisa empate:
+    narra("empatado")
+    var prorrogacao:
+        narra("vai pra prorrogacao")
+segue:
+    narra("perdendo")
