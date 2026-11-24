@@ -54,7 +54,8 @@ comando_simples
     | GOL
     | GOL expr
     | CERA
-    /* TODO: Membro 2 - comandos apita (break) e vantagem (continue) */
+    | APITA
+    | VANTAGEM
     ;
 
 expr_stmt
@@ -75,7 +76,8 @@ op_atribuicao
 comando_composto
     : condicional
     | definicao_jogada
-    /* TODO: Membro 2 - incluir os lacos rola e rodada aqui */
+    | laco_rola
+    | laco_rodada
     ;
 
 /* var / revisa / segue  (if / elif / else) */
@@ -93,9 +95,15 @@ senao
     | SEGUE ':' bloco
     ;
 
-/* TODO: Membro 2 - regras dos lacos:
-     laco_rola   -> rola (while)
-     laco_rodada -> rodada ... em (for ... in) */
+/* rola (while) */
+laco_rola
+    : ROLA expr ':' bloco
+    ;
+
+/* rodada ... em (for ... in) */
+laco_rodada
+    : RODADA ID EM expr ':' bloco
+    ;
 
 /* jogada (def) */
 definicao_jogada

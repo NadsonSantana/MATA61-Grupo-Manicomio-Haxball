@@ -1,0 +1,9 @@
+jogada partida():
+    rola legal:
+        var cartao_vermelho:
+            apita
+        revisa falta:
+            vantagem
+        segue:
+            cera
+    gol WO
