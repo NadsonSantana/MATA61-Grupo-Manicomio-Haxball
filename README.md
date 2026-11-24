@@ -34,4 +34,8 @@ bash scripts/run_tests.sh
 ## Entrega
 
 Cada etapa é desenvolvida numa branch própria (ex.: `m2`) e entregue por um Pull Request
-para a `main`, que fica aberto para a correção.
+que fica aberto para a correção.
+
+- **M2:** [PR #5](https://github.com/NadsonSantana/MATA61-Grupo-Manicomio-Haxball/pull/5)
+  (`m2` → `base-m2`). A branch `base-m2` tem só o primeiro commit, então o PR mostra a M2
+  inteira, com os commits de todos os membros.
