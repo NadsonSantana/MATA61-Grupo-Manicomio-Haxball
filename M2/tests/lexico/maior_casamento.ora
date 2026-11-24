@@ -1,0 +1,27 @@
+<ID, golaco>
+<GOL>
+<ID, aco>
+<ID, emnao>
+<EM>
+<NAO>
+<NEWLINE>
+<ID, a>
+<POT>
+<'='>
+<ID, b>
+<NEWLINE>
+<ID, a>
+<IGUAL>
+<IGUAL>
+<ID, b>
+<NEWLINE>
+<ID, a>
+<'<'>
+<MENOR_IGUAL>
+<ID, b>
+<NEWLINE>
+<ID, x>
+<'='>
+<FLOAT, 1.2>
+<FLOAT, .3>
+<NEWLINE>
